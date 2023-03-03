@@ -227,7 +227,7 @@ class Guild(metaclass=YAMLGetter):
 
     moderation_roles: List[int]
 
-class Event(Enum):
+class Events(Enum):
     '''
     Defines constants for the different types of events
     that can be triggered by the bot.
@@ -251,7 +251,7 @@ class Event(Enum):
 
     voice_state_update = 'voice_state_update'
 
-class Cog(Enum):
+class Cogs(Enum):
     '''
     Defines constants for the different cogs that can be
     loaded and unloaded by the bot.

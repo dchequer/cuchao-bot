@@ -3,7 +3,6 @@ from discord.ext import commands
 import logging
 
 from typing import Optional
-from Questionnaire import Questionnaire
 from discord import ui, app_commands
 
 from src import constants
@@ -14,7 +13,7 @@ if __name__ == '__main__':
     intents.members = True
 
     allowed_roles = list({discord.Object(id_) for id_ in constants.MODERATION_ROLES})
-    cogs = list({cog for cog in constants.COGS})
+    cogs = list({cog for cog in constants.Cogs})
 
     bot = commands.Bot(
         command_prefix=constants.Bot.prefix,
