@@ -1,4 +1,8 @@
-prefix.txt
+# env folder
 env/
+
+# logs file
 discord.log
-tokens.json
+
+# config file | contains secret token
+config-default.yml
