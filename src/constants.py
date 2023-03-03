@@ -257,7 +257,7 @@ class Cog(Enum):
     loaded and unloaded by the bot.
     '''
     general = 'general'
-    #events = 'events'
+    greetings = 'greetings'
     #general = 'general'
     #help = 'help'
     #info = 'info'
