@@ -130,6 +130,9 @@ class Bot(metaclass=YAMLGetter):
     token: str
     description: str
 
+    status: str
+    #presence: List[str]
+
 class Colours(metaclass=YAMLGetter):
     section = 'style'
     subsection = 'colours'
@@ -256,8 +259,8 @@ class Cogs(Enum):
     Defines constants for the different cogs that can be
     loaded and unloaded by the bot.
     '''
-    general = 'general'
-    greetings = 'greetings'
+    general: str = 'General'
+    greetings: str = 'Greetings'
     #general = 'general'
     #help = 'help'
     #info = 'info'

@@ -1,31 +1,51 @@
+import asyncio
+import logging
+from typing import List
+
 import discord
 from discord.ext import commands
-import logging
-
-from typing import Optional
-from discord import ui, app_commands
 
 from src import constants
 
-if __name__ == '__main__':
-    intents = discord.Intents.all()
-    intents.message_content = True
-    intents.members = True
+# Set up intents
+intents: discord.Intents = discord.Intents.all()
+intents.message_content = True
+intents.members = True
+# Set up allowed roles
+allowed_roles: List[object] = list({discord.Object(id_) for id_ in constants.MODERATION_ROLES})
+# Set up cogs
+cogs: List[str] = list({cog.value for cog in constants.Cogs})
+# Set up bot
+bot = commands.Bot(
+    command_prefix=constants.Bot.prefix,
+    intents=intents,
+    description=constants.Bot.description,
+    allowed_mentions=discord.AllowedMentions(everyone=False, users=True, roles=allowed_roles)
+)
 
-    allowed_roles = list({discord.Object(id_) for id_ in constants.MODERATION_ROLES})
-    cogs = list({cog for cog in constants.Cogs})
+@bot.event
+async def on_ready() -> None:
+    '''Event that runs when the bot is ready'''
 
-    bot = commands.Bot(
-        command_prefix=constants.Bot.prefix,
-        intents=intents,
-        description=constants.Guild.description,
-        allowed_mentions=discord.AllowedMentions(everyone=False, users=True, roles=allowed_roles)
-    )
-    handler: logging.FileHandler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')
-
-    bot.run(token=constants.Bot.token, reconnect=True, log_handler=handler, log_level=logging.DEBUG)
+    # Load cogs
     for cog in cogs:
-        bot.load_extension(cog)
+        await bot.load_extension(cog)
+
+    # Set bot status
+    await bot.change_presence(activity=discord.Game(name=constants.Bot.status))
+
+    # Log bot information
+    logging.info(f'Logged in as {bot.user.name}#{bot.user.discriminator}')
+    print(f'Logged in as {bot.user.name}#{bot.user.discriminator}')
+
+    return
+
+# Set up logging
+handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')
+handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(message)s'))
 
 
-    
+# Run bot
+print('Starting bot...')
+if __name__ == '__main__':
+    bot.run(token=constants.Bot.token, reconnect=True, log_handler=handler, log_level=logging.DEBUG)

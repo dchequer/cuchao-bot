@@ -6,7 +6,11 @@ class General(commands.Cog):
         self.bot = bot
         print('General cog loaded')
 
-    
+    @commands.Cog.listener()
+    async def on_ready(self):
+        print('Bot is ready')
+        print(f'Logged in as {self.bot.user.name}#{self.bot.user.discriminator}')
+
 
 
 def setup(bot):
