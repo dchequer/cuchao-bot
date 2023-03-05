@@ -260,7 +260,7 @@ class Cogs(Enum):
     loaded and unloaded by the bot.
     '''
     Help: str = 'Help'
-    Tournament: str = 'Tournament'
+    Tournaments: str = 'Tournaments'
     #general = 'general'
     #help = 'help'
     #info = 'info'

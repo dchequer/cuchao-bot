@@ -15,7 +15,6 @@ allowed_roles: List[object] = list({discord.Object(id_) for id_ in constants.MOD
 # Set up bot
 bot: commands.Bot = commands.Bot(
     command_prefix=constants.Bot.prefix,
-    intents=intents,
-    description=constants.Bot.description,
-    allowed_mentions=discord.AllowedMentions(everyone=False, users=True, roles=allowed_roles)
+    intents=discord.Intents.all(),
+    help_command=None
 )
