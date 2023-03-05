@@ -3,6 +3,11 @@ bot:
     token:          "token"
     description:    "Self-built multi-use discord bot"
 
+    status:         "adal esta menso"
+
+    presence:
+        jugando:    "ola toy jugando"
+
 style: 
     colours: 
         blue:           0x3775a8
@@ -59,7 +64,7 @@ guild:
 
         # content creation
         editor:             1078937524522717240
-        content-creator:    1078937524522717237
+        content_creator:    1078937524522717237
         caster:             1080584215097258045
         tester:             1078937524522717238
 

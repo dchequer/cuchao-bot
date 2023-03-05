@@ -4,5 +4,5 @@ env/
 # logs file
 discord.log
 
-# config file | contains secret token
-config-default.yml
+# token file | contains secret token
+token.txt
