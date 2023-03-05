@@ -259,8 +259,8 @@ class Cogs(Enum):
     Defines constants for the different cogs that can be
     loaded and unloaded by the bot.
     '''
-    general: str = 'General'
-    greetings: str = 'Greetings'
+    Help: str = 'Help'
+    Tournament: str = 'Tournament'
     #general = 'general'
     #help = 'help'
     #info = 'info'
