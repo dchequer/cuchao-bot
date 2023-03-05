@@ -18,7 +18,7 @@ async def on_ready() -> None:
         await bot.load_extension(f'cogs.{cog_name}')
 
 @bot.command
-async def reload_all(ctx):
+async def reload_all():
     cogs = list({cog.value for cog in constants.Cogs})
     for cog in cogs:
         await bot.unload_extension(f'cogs.{cog}')
