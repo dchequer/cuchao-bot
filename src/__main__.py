@@ -35,8 +35,18 @@ async def on_ready() -> None:
     await bot.change_presence(activity=discord.Game(name=constants.Bot.status))
 
     # Log bot information
-    logging.info(f'Logged in as {bot.user.name}#{bot.user.discriminator}')
+    #logging.info(f'Logged in as {bot.user.name}#{bot.user.discriminator}')
     print(f'Logged in as {bot.user.name}#{bot.user.discriminator}')
+
+    return
+
+@bot.event
+async def on_connect() -> None:
+    '''Event that runs when the bot connects to the Discord API'''
+
+    # Log bot information
+    #logging.info(f'Connected to Discord API')
+    print(f'Connected to Discord API')
 
     return
 
@@ -48,4 +58,6 @@ handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(me
 # Run bot
 print('Starting bot...')
 if __name__ == '__main__':
-    bot.run(token=constants.Bot.token, reconnect=True, log_handler=handler, log_level=logging.DEBUG)
+    with open('token.txt', 'r') as f:
+        token = f.read()
+    bot.run(token=token, reconnect=True, log_handler=handler, log_level=logging.DEBUG)
