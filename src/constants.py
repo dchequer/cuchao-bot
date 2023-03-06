@@ -149,9 +149,11 @@ class Colours(metaclass=YAMLGetter):
     yellow: int
 
 class Emojis(metaclass=YAMLGetter):
+    '''When iterating over this class, it will return a generator of key:value pairs'''
     section = 'style'
     subsection = 'emojis'
 
+    # still
     agucatatito: str
     pixel_number_one: str
     pixel_number_two: str
@@ -161,18 +163,22 @@ class Emojis(metaclass=YAMLGetter):
     pixel_number_six: str
     pixel_number_seven: str
     goldstar: str
-    Villager_Question_What: str
+    villager_what: str
     lock: str
     kheverga: str
     info: str
     overwatch: str
 
     # animated
-    GreenCheckMark: str
+    green_check_mark: str
     black_and_white_tick: str
-    AGENT_Warning: str
-    Warning: str
+    agent_warning: str
+    warning: str
     tick_red: str
+
+    # Lists
+    game_emojis: List[str]      # list of emoji codes for game icons
+    game_names: List[str]       # list of game names for game icons
 
 class Categories(metaclass=YAMLGetter):
     section = 'guild'
@@ -238,6 +244,7 @@ class Guild(metaclass=YAMLGetter):
     invite: str
 
     moderation_roles: List[int]
+    game_roles: List[int]
 
 class Events(Enum):
     '''

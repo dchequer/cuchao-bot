@@ -23,27 +23,32 @@ style:
     
     emojis:
         # static
-        agucatatito:                ':agucatatito:'
-        pixel_number_one:           ':pixel_number_one:'
-        pixel_number_two:           ':pixel_number_two:'
-        pixel_number_three:         ':pixel_number_three:'
-        pixel_number_four:          ':pixel_number_four:'
-        pixel_number_five:          ':pixel_number_five:'
-        pixel_number_six:           ':pixel_number_six:'
-        pixel_number_seven:         ':pixel_number_seven:'
-        goldstar:                   ':goldstar:'
-        Villager_Question_What:     ':Villager_Question_What:'
-        lock:                       ':lock:'
-        kheverga:                   ':kheverga:'
-        info:                       ':info:'
-        overwatch:                  ':overwatch:'
+        agucatatito:                    '<:agucatatito:1080334428053704855>'
+        pixel_number_one:               '<:pixel_number_one:1081267770387349504>'
+        pixel_number_two:               '<:pixel_number_two:1081267766029463644>'
+        pixel_number_three:             '<:pixel_number_three:1081267764804734986>'
+        pixel_number_four:              '<:pixel_number_four:1081267768483135558>'
+        pixel_number_five:              '<:pixel_number_five:1081267767426166885>'
+        pixel_number_six:               '<:pixel_number_six:1081267763546427563>'
+        pixel_number_seven:             '<:pixel_number_seven:1081267771863728318>'
+        goldstar:                       '<:goldstar:1081062638118780938>'
+        villager_what:                  '<:Villager_Question_What:1081062632200618094>'
+        lock:                           '<:lock:1081062628744507442>'
+        kheverga:                       '<:kheverga:1081062627448471572>'
+        info:                           '<:info:1081062625414234143>'
+        overwatch:  &OVERWATCH_EMOJI    '<:overwatch:1081062521718439988>'
 
         # animated
-        GreenCheckMark:             ':GreenCheckMark:'
-        black_and_white_tick:       'black_and_white_tick:'
-        AGENT_Warning:              ':AGENT_Warning:'
-        Warning:                    ':Warning:'
-        tick_red:                   ':tick_red:'
+        green_check_mark:               '<:GreenCheckMark:1081062523882705069>'
+        black_and_white_tick:           '<:black_and_white_tick:1081062636717867059>'
+        agent_warning:                  '<:AGENT_Warning:1081062634419388467>'
+        warning:                        '<:Warning:1081062633337274388>'
+        tick_red:                       '<:tick_red:1081062630380294185>'
+
+        game_emojis:
+            - *OVERWATCH_EMOJI
+        game_names:
+            - "overwatch"
 
 guild:
     id:     1078937524522717234
@@ -52,15 +57,15 @@ guild:
 
     categories:
         # various general categories
-        stats:      1078937525499985984
-        admin:      1078937525281886258
-        lobby:      1078937524564656209
-        info:       1078937524564656211
-        text:       1078937525026041869
-        voice:      1078937525026041872
+        stats:          1078937525499985984
+        admin:          1078937525281886258
+        lobby:          1078937524564656209
+        info:           1078937524564656211
+        text:           1078937525026041869
+        voice:          1078937525026041872
 
         # game categories
-        overwatch:         1080514923450351757
+        overwatch:      1080514923450351757
     
     channels:
         # public announcements and news channels
@@ -70,10 +75,10 @@ guild:
         tourney:        1080280196986437672
 
         # looking for team
-        LFT:        1080899228169154700
+        LFT:            1080899228169154700
 
         # support / help
-        support:    1078937525281886256
+        support:        1078937525281886256
     
     roles:
 
@@ -98,7 +103,7 @@ guild:
         player:             1078937524522717236
 
         # games
-        overwatch :         1080283720705130509
+        overwatch :      &OVERWATCH_ROLE   1080283720705130509
     
     moderation_roles:
         - *CUCHAO_ROLE
@@ -106,3 +111,5 @@ guild:
         - *DEVS_ROLE
         - *MODERATORS_ROLE
 
+    game_roles:
+        - *OVERWATCH_ROLE
