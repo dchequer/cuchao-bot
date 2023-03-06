@@ -22,8 +22,29 @@ style:
         yellow:         0xffd241
     
     emojis:
-        agucatatito:    1080989017031585872
-    
+        # static
+        agucatatito:                ':agucatatito:'
+        pixel_number_one:           ':pixel_number_one:'
+        pixel_number_two:           ':pixel_number_two:'
+        pixel_number_three:         ':pixel_number_three:'
+        pixel_number_four:          ':pixel_number_four:'
+        pixel_number_five:          ':pixel_number_five:'
+        pixel_number_six:           ':pixel_number_six:'
+        pixel_number_seven:         ':pixel_number_seven:'
+        goldstar:                   ':goldstar:'
+        Villager_Question_What:     ':Villager_Question_What:'
+        lock:                       ':lock:'
+        kheverga:                   ':kheverga:'
+        info:                       ':info:'
+        overwatch:                  ':overwatch:'
+
+        # animated
+        GreenCheckMark:             ':GreenCheckMark:'
+        black_and_white_tick:       'black_and_white_tick:'
+        AGENT_Warning:              ':AGENT_Warning:'
+        Warning:                    ':Warning:'
+        tick_red:                   ':tick_red:'
+
 guild:
     id:     1078937524522717234
     name:   "Gaming Championship Series"

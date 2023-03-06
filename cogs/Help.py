@@ -12,6 +12,14 @@ class Help(commands.Cog):
     @commands.command()
     async def help(self, ctx: commands.Context):
         await ctx.send('help')
+    
+    @commands.command(name='emojis')
+    async def get_emojis(self, ctx: commands.Context):
+        emojis = ctx.guild.emojis
+        embed = discord.Embed(title='Emojis', description='List of emojis', color=0x00ff00)
+        for emoji in emojis:
+            embed.add_field(name=emoji.name, value=emoji.id, inline=True)
+        await ctx.send(embed=embed)
 
 async def setup(bot: commands.Bot):
     await bot.add_cog(Help(bot))

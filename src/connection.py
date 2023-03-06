@@ -17,9 +17,10 @@ async def on_ready() -> None:
     for cog_name in cog_names:
         await bot.load_extension(f'cogs.{cog_name}')
 
-@bot.command
-async def reload_all():
+@bot.command(name='reload')
+async def reload_all(ctx: commands.Context):
     cogs = list({cog.value for cog in constants.Cogs})
     for cog in cogs:
         await bot.unload_extension(f'cogs.{cog}')
         await bot.load_extension(f'cogs.{cog}')
+    await ctx.send('Reloaded all cogs')

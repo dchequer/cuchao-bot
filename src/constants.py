@@ -152,18 +152,27 @@ class Emojis(metaclass=YAMLGetter):
     section = 'style'
     subsection = 'emojis'
 
-    agucatatito: int
-    '''
-    cross: str
-    green_tick: str
-    info: str
+    agucatatito: str
+    pixel_number_one: str
+    pixel_number_two: str
+    pixel_number_three: str
+    pixel_number_four: str
+    pixel_number_five: str
+    pixel_number_six: str
+    pixel_number_seven: str
+    goldstar: str
+    Villager_Question_What: str
     lock: str
-    question: str
-    red_tick: str
-    star: str
-    warning: str
-    white_check_mark: str
-    '''
+    kheverga: str
+    info: str
+    overwatch: str
+
+    # animated
+    GreenCheckMark: str
+    black_and_white_tick: str
+    AGENT_Warning: str
+    Warning: str
+    tick_red: str
 
 class Categories(metaclass=YAMLGetter):
     section = 'guild'
