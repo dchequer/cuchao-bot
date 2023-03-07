@@ -22,13 +22,13 @@ class Tournaments(commands.Cog):
         Message is sent to the channel the command was sent in.
         '''
         embed = discord.Embed(title='Choose your roles', description='React with the games you like play', color=constants.Colours.blue)
-        for emoji_name, emoji_code in zip(constants.Emojis.game_names, constants.Emojis.game_emojis):
+        for emoji_name, emoji_code in zip(constants.GAME_NAMES, constants.GAME_EMOJIS):
             embed.add_field(name=emoji_name, value=emoji_code, inline=False)
 
         sent = await ctx.send(embed=embed, silent=True)
         self.ROLES_MESSAGE_ID = sent.id
 
-        for emoji_code in constants.Emojis.game_emojis:        # add the emojis to the message
+        for emoji_code in constants.GAME_EMOJIS:        # add the emojis to the message
             await sent.add_reaction(emoji_code)
 
     @commands.Cog.listener()
@@ -37,7 +37,7 @@ class Tournaments(commands.Cog):
             return
     
         if reaction.message.id == self.ROLES_MESSAGE_ID:        # check if the emoji is in the list of emojis
-            if reaction.emoji.name not in constants.Emojis.game_names:
+            if reaction.emoji.name not in constants.GAME_NAMES:
                 await reaction.remove(user)
                 return
 

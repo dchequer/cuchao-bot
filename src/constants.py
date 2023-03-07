@@ -289,6 +289,9 @@ class Cogs(Enum):
 
 # Default role IDs for the guild.
 MODERATION_ROLES = Guild.moderation_roles
+GAME_ROLES = Guild.game_roles
+GAME_NAMES = Emojis.game_names
+GAME_EMOJIS = Emojis.game_emojis
 
 NEGATIVE_REPLIES = [
     'No',
