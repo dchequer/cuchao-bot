@@ -16,6 +16,5 @@ print('Starting bot...')
 if __name__ == '__main__':
     with open('token.txt', 'r') as f:
         token = f.read()
-    #bot.run(token=token, reconnect=False, log_handler=handler, log_level=logging.DEBUG)
-    #bot = bot
+    
     bot.run(token=token, reconnect=False)
