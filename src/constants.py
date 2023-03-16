@@ -168,6 +168,7 @@ class Emojis(metaclass=YAMLGetter):
     kheverga: str
     info: str
     overwatch: str
+    rocket_league: str
 
     # animated
     green_check_mark: str
@@ -235,6 +236,7 @@ class Roles(metaclass=YAMLGetter):
 
     # game roles
     overwatch: int
+    rocket_league: int
 
 class Guild(metaclass=YAMLGetter):
     section = 'guild'

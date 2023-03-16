@@ -23,20 +23,21 @@ style:
     
     emojis:
         # static
-        agucatatito:                    '<:agucatatito:1080334428053704855>'
-        pixel_number_one:               '<:pixel_number_one:1081267770387349504>'
-        pixel_number_two:               '<:pixel_number_two:1081267766029463644>'
-        pixel_number_three:             '<:pixel_number_three:1081267764804734986>'
-        pixel_number_four:              '<:pixel_number_four:1081267768483135558>'
-        pixel_number_five:              '<:pixel_number_five:1081267767426166885>'
-        pixel_number_six:               '<:pixel_number_six:1081267763546427563>'
-        pixel_number_seven:             '<:pixel_number_seven:1081267771863728318>'
-        goldstar:                       '<:goldstar:1081062638118780938>'
-        villager_what:                  '<:Villager_Question_What:1081062632200618094>'
-        lock:                           '<:lock:1081062628744507442>'
-        kheverga:                       '<:kheverga:1081062627448471572>'
-        info:                           '<:info:1081062625414234143>'
-        overwatch:  &OVERWATCH_EMOJI    '<:overwatch:1081062521718439988>'
+        agucatatito:                            '<:agucatatito:1080334428053704855>'
+        pixel_number_one:                       '<:pixel_number_one:1081267770387349504>'
+        pixel_number_two:                       '<:pixel_number_two:1081267766029463644>'
+        pixel_number_three:                     '<:pixel_number_three:1081267764804734986>'
+        pixel_number_four:                      '<:pixel_number_four:1081267768483135558>'
+        pixel_number_five:                      '<:pixel_number_five:1081267767426166885>'
+        pixel_number_six:                       '<:pixel_number_six:1081267763546427563>'
+        pixel_number_seven:                     '<:pixel_number_seven:1081267771863728318>'
+        goldstar:                               '<:goldstar:1081062638118780938>'
+        villager_what:                          '<:Villager_Question_What:1081062632200618094>'
+        lock:                                   '<:lock:1081062628744507442>'
+        kheverga:                               '<:kheverga:1081062627448471572>'
+        info:                                   '<:info:1081062625414234143>'
+        overwatch:      &OVERWATCH_EMOJI        '<:overwatch:1081062521718439988>'
+        rocket_league:  &ROCKET_LEAGUE_EMOJI    '<:rocket_league:1085740047212482590>' 
 
         # animated
         green_check_mark:               '<:GreenCheckMark:1081062523882705069>'
@@ -47,8 +48,10 @@ style:
 
         game_emojis:
             - *OVERWATCH_EMOJI
+            - *ROCKET_LEAGUE_EMOJI
         game_names:
-            - "overwatch"
+            - 'overwatch'
+            - 'rocket_league'
 
 guild:
     id:     1078937524522717234
@@ -103,7 +106,8 @@ guild:
         player:             1078937524522717236
 
         # games
-        overwatch :      &OVERWATCH_ROLE   1080283720705130509
+        overwatch:      &OVERWATCH_ROLE         1085738041504706571
+        rocket_league:  &ROCKET_LEAGUE_ROLE     1085739389801463959
     
     moderation_roles:
         - *CUCHAO_ROLE
@@ -113,3 +117,4 @@ guild:
 
     game_roles:
         - *OVERWATCH_ROLE
+        - *ROCKET_LEAGUE_ROLE

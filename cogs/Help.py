@@ -17,7 +17,9 @@ class Help(commands.Cog):
     @commands.command(name='emojis')
     async def get_emojis(self, ctx: commands.Context):
         '''Show a list of emojis'''
-        emojis: List[Tuple[str, str]] = constants.Emojis            # List of emojis, each emoji is a tuple of (name, emoji)
+        #emojis: List[Tuple[str, str]] = constants.Emojis            # List of emojis, each emoji is a tuple of (name, emoji)
+        emojis = ctx.guild.emojis
+        print(emojis)
         embed: discord.Embed = discord.Embed(title='Emojis', description='List of emojis', color=0xcb0b7a)
 
         for emoji_name, emoji_code in emojis:
