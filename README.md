@@ -21,7 +21,8 @@ python __main__.py
 Cuchao Bot currently supports the following features:
 
 +ping: Pong!  
-+help: Displays a list of available commands and their descriptions.
++emojis: Displays each emoji as its internal name and internal id
++choose_roles: Sends an embed that is listened to for reactions and adds the corresponding role for each reaction
 
 ## Contributing
 Contributions to Cuchao Bot are welcome! If you would like to contribute, please fork the repository and submit a pull request.
